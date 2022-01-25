@@ -14,7 +14,7 @@
 }
 
 .preloader-1 {
-  background: black url(preloader.gif) no-repeat center center;
+  background: black url(preloader-min.gif) no-repeat center center;
   background-size: 20%;
   width: 100vw;
   height: 100vh;
@@ -345,11 +345,10 @@ h3 {
 }
 
 .steps-vid {
-  width: 95%;
-  height: 95%;
+  width: 80%;
   z-index: 0;
   position: relative;
-  left: 5%;
+  left: 12%;
 }
 
 #ui-ux {
@@ -359,11 +358,10 @@ h3 {
 }
 
 .ui-vid {
-  width: 95%;
-  height: 95%;
+  width: 80%;
   z-index: 100;
   position: relative;
-  left: 4%;
+  left: 10%;
 }
 
 .blue-balls {
@@ -396,14 +394,13 @@ h3 {
   margin-right: 6vw;
 }
 
-.intro-icon {
+.intro-icon, .btc-intro-icon {
   margin-bottom: 1vw;
   color: white;
+  font-size: 2em;
 }
 
 .btc-intro-icon {
-  margin-bottom: 1vw;
-  color: white;
   transform: rotate(15deg);
 }
 
@@ -574,7 +571,6 @@ form * {
   text-align: center;
   word-spacing: .3rem;
   line-height: 1.2rem;
-  margin-right: -76px;
 }
 
 .community {
@@ -598,6 +594,7 @@ form * {
   background-color: black;
   text-align: center;
   padding: 3vw 0 .1vw 0;
+  margin-top: -1px;
 }
 
 #cta {
@@ -775,7 +772,6 @@ form * {
     padding: 3% 3% 3%;
     text-align: center;
     background-color: black;
-    margin-top: 0px;
   }
 
   #title {
@@ -824,6 +820,10 @@ form * {
   .intro-head {
     position: relative;
     z-index: 1;
+  }
+
+  .intro-grid {
+    padding-top: 50px;
   }
 
   .phone {
@@ -916,6 +916,36 @@ form * {
 
   .team-text {
     padding-top: 2.5%;
+  }
+
+  .steps-vid, .ui-vid {
+    width: 100%;
+    height:100%;
+    left: 0%;
+  }
+
+  .steps-vid {
+    left: 1%;
+  }
+
+  .intro-right, .intro-text-right {
+    text-align: right;
+    margin-left: 450px;
+    margin-right: 0px;
+  }
+
+  .intro-left, .intro-text-left {
+    margin-right: 450px;
+  }
+
+  .intro-grid-left {
+    text-align: right;
+  }
+
+  .intro-icon, .btc-intro-icon {
+    font-size: 5em;
+    position: relative;
+    top: 120px;
   }
 
 }
