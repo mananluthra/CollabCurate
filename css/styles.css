@@ -14,7 +14,7 @@
 }
 
 .preloader-1 {
-  background: black url(file:///C:/Users/manan/Desktop/CollabCurate/preloader.gif) no-repeat center center;
+  background: black url(preloader.gif) no-repeat center center;
   background-size: 20%;
   width: 100vw;
   height: 100vh;
