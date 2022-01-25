@@ -211,11 +211,12 @@ h3 {
 
 .ethereum {
   position: relative;
-  height: 50vw;
+  height: 700px;
+  width: 700px;
   z-index: 1;
   left: -18vw;
-  top: -3vh;
-  margin-bottom: -14vh;
+  top: -4vh;
+  margin-bottom: -12vh;
   margin-top: 10vh;
 }
 
@@ -241,10 +242,11 @@ h3 {
   text-align: center;
   background: black;
   margin-top: -2vw;
+  position: relative;
 }
 
 .black-box {
-  background-color: #090E1B;
+  background: #ffffff0d;
   padding-top: 100px;
   padding-bottom: 100px;
   padding-left: 250px;
@@ -253,7 +255,9 @@ h3 {
   transition: all .5s ease-in-out;
   position: relative;
   z-index: 100;
-  -webkit-box-shadow: -1px 0px 25px 16px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: -1px 0px 25px 16px rgb(0 0 0);
+  backdrop-filter: blur(10px);
+  border: 1px solid #4a4a4a;
 }
 
 .testimonial-text {
@@ -264,7 +268,7 @@ h3 {
 
 .blockchain {
   width: 22rem;
-  margin-left: 836px;
+  margin-left: 780px;
   margin-top: -460px;
   margin-bottom: -90px;
 }
@@ -302,59 +306,6 @@ h3 {
 }
 
 /* CAROUSEL END */
-@media (max-width: 1200px) {
-  body {
-    overflow-x: hidden;
-  }
-
-  .phone {
-    position: static;
-    margin-top: 23px;
-    margin-left: -05px;
-  }
-
-  .steps-vid {
-    width: 10px;
-    height: 10px;
-    z-index: 100;
-    position: relative;
-    overflow-x: hidden;
-  }
-
-  #features {
-    padding: 3% 3% 3%;
-    text-align: center;
-    background-color: black;
-    margin-top: 0px;
-  }
-
-  #title {
-    text-align: center;
-  }
-
-  .white-box {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
-  .white-box:hover {
-    transform: scale(1);
-    padding: 11.5%;
-  }
-
-  .blockchain {
-    display: none;
-  }
-
-  .carousel-control-prev {
-    display: none;
-  }
-
-  .carousel-control-next {
-    display: none;
-  }
-}
-
 /* STEPS SECTION */
 #steps {
   background-color: black;
@@ -394,17 +345,17 @@ h3 {
 }
 
 .steps-vid {
-      width: 95%;
-      height: 95%;
-      z-index: 100;
-      position: relative;
-      left: 5%;
+  width: 95%;
+  height: 95%;
+  z-index: 0;
+  position: relative;
+  left: 5%;
 }
 
 #ui-ux {
   background-color: black;
   margin-top: -0.5vw;
-  padding-bottom: 19%;
+  padding-bottom: 12%;
 }
 
 .ui-vid {
@@ -418,128 +369,10 @@ h3 {
 .blue-balls {
   width: 35%;
   position: absolute;
-  top: 170vw;
-  right: 0vw;
+  top: 100px;
+  right: 0px;
   z-index: 1;
   overflow-x: hidden;
-}
-
-#cta {
-  background: rgb(9, 14, 27);
-  background: linear-gradient(180deg, rgba(9, 14, 27, 1) 0%, rgba(0, 0, 0, 1) 100%);
-  overflow: hidden;
-  padding: 3vw 6vw 6vw 6vw;
-  margin-top: -0.5vw;
-}
-
-.team-head {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  color: white;
-  text-align: left;
-  padding-top: 3rem;
-  padding-bottom: 6rem;
-}
-
-.cta-text {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  color: white;
-  text-align: center;
-  padding-top: 3rem;
-  padding-bottom: 2rem;
-}
-
-.team-dhruv {
-  display: flex;
-  width: 25vw;
-  height: 40vw;
-  background: rgb(243, 33, 112);
-  border-radius: 1em;
-}
-
-.team-manan {
-  display: flex;
-  width: 60vw;
-  height: 20vw;
-  background: rgb(189, 0, 255);
-  border-radius: 1em;
-  margin-left: -40px;
-}
-
-.team-agestya {
-  display: flex;
-  width: 60vw;
-  height: 18vw;
-  background: rgb(255, 107, 8);
-  border-radius: 1em;
-  margin-top: 22vw;
-  margin-left: -500px;
-}
-
-#cta img {
-  width: 3.75rem;
-  padding: 0px;
-  margin-left: 3vw;
-  position: absolute;
-  margin-top: 2.75vw;
-  border-radius: 50%;
-}
-
-.team-text {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  font-size: 1.3vw;
-  padding-top: 2.8vw;
-  padding-left: 8vw;
-  color: white;
-}
-
-.team-para {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 0.7vw;
-  position: absolute;
-  margin-top: 4.7vw;
-  margin-left: 8.1vw;
-  color: white;
-}
-
-.dhruv-bol {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  font-size: .85vw;
-  position: absolute;
-  padding-top: 8.4vw;
-  padding-left: 3vw;
-  padding-right: 71vw;
-  color: white;
-}
-
-.agestya-bol {
-  position: absolute;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  font-size: .85vw;
-  padding-left: 3vw;
-  padding-right: 8vw;
-  padding-top: 2.8vw;
-  margin-top: 5vw;
-  margin-left: 0vw;
-  color: white;
-}
-
-.manan-bol {
-  position: absolute;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  font-size: .85vw;
-  padding-left: 3vw;
-  padding-right: 8vw;
-  padding-top: 2.8vw;
-  margin-top: 5vw;
-  margin-left: 0vw;
-  color: white;
 }
 
 #intro {
@@ -613,7 +446,9 @@ h3 {
 #login-page {
   background: rgb(0, 0, 0);
   background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(9, 14, 27, 1) 100%);
-  padding: 3vh 8vw 20vh 8vw;
+  padding: 3vh 8vw 12% 8vw;
+  position: relative;
+  margin-top: -1px;
 }
 
 .signup {
@@ -709,7 +544,7 @@ form * {
   background: linear-gradient(#1845ad,
       #23a2f6);
   left: 53vw;
-  top: 576vh;
+  top: -40px;
 }
 
 .shape-2 {
@@ -721,7 +556,7 @@ form * {
       #ff512f,
       #f09819);
   right: 0vw;
-  top: 655vh;
+  top: 400px;
 }
 
 #login-page h2 {
@@ -743,7 +578,7 @@ form * {
 }
 
 .community {
-    padding-top: 13%;
+  padding-top: 13%;
 }
 
 .social {
@@ -763,6 +598,123 @@ form * {
   background-color: black;
   text-align: center;
   padding: 3vw 0 .1vw 0;
+}
+
+#cta {
+  background: rgb(9, 14, 27);
+  background: linear-gradient(180deg, rgba(9, 14, 27, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  overflow: hidden;
+  padding: 3vw 6vw 6vw 6vw;
+  margin-top: -0.5vw;
+}
+
+.team-head {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: white;
+  text-align: left;
+  padding-top: 3rem;
+  padding-bottom: 6rem;
+}
+
+.cta-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+#cta img {
+  width: 3.75rem;
+  border-radius: 50%;
+}
+
+.cont {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  max-width: 1400px !important;
+}
+
+.damn {
+  padding-left: 0 !important;
+}
+
+.team-box {
+  width: 94%;
+  height: 100%;
+  background: rgb(243, 33, 112);
+  border-radius: 20px;
+  position: relative;
+}
+
+.box-header {
+  padding-top: 10%;
+}
+
+.second-box-header {
+  padding-top: 5%;
+}
+
+.team-text {
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.team-box-2 {
+  width: 106%;
+  height: 100%;
+  background: rgb(189, 0, 255);
+  border-radius: 20px;
+  left: -28px;
+  position: relative;
+}
+
+.team-box-3 {
+  width: 106%;
+  height: 100%;
+  background: rgb(255, 107, 8);
+  border-radius: 20px;
+  left: -28px;
+  position: relative;
+}
+
+.manan-text {
+  padding-top: 2.5%;
+  padding-bottom: 3%;
+}
+
+.agestya-sec {
+  padding-top: 10px;
+}
+
+.start {
+  padding-left: 20px;
+}
+
+.founder-name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 135%;
+}
+
+.founder-position {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 72%;
+  color: white;
+}
+
+.founder-speech {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  color: white;
+  font-size: 80%;
+}
+
+.dhruv-name-extra-padding {
+  padding-left: 8% !important;
 }
 
 .footer-link {
@@ -794,4 +746,195 @@ form * {
   padding-top: 2vw;
   color: white;
   font-size: .8rem;
+}
+
+/* responivesness for 1200px */
+@media screen and (max-width: 1200px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .intro-head {
+    position: relative;
+    z-index: 1;
+  }
+
+  .download-button {
+    position: relative;
+    z-index: 1;
+  }
+
+  .phone {
+    display: none;
+    position: static;
+    margin-top: 23px;
+    margin-left: -05px;
+  }
+
+  #features {
+    padding: 3% 3% 3%;
+    text-align: center;
+    background-color: black;
+    margin-top: 0px;
+  }
+
+  #title {
+    text-align: center;
+  }
+
+  .white-box {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .white-box:hover {
+    transform: scale(1);
+    padding: 11.5%;
+  }
+
+  .ethereum {
+    display: none;
+  }
+
+  .blockchain {
+    display: none;
+  }
+
+}
+
+/* responsiveness for 1400px */
+@media screen and (max-width:1400px) {
+  .blockchain {
+    display: none;
+  }
+
+  .carousel-control-prev {
+    display: none !important;
+  }
+
+  .carousel-control-next {
+    display: none !important;
+  }
+
+  .ethereum {}
+}
+
+/* responivesness for 992px */
+@media screen and (max-width:992px) {
+  .intro-head {
+    position: relative;
+    z-index: 1;
+  }
+
+  .phone {
+    margin: 0;
+    position: relative;
+    height: 300%;
+    width: 100%;
+  }
+
+  .col-lg-3.main-intro-grid {
+    padding-left: 0px;
+  }
+
+  .dala {
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .carousel-control-prev {
+    margin-left: -40px;
+    display: none !important;
+  }
+
+  .carousel-control-next {
+    display: none !important;
+  }
+
+  .blue-balls {
+    top: 250px;
+  }
+
+  .ethereum {
+    display: none;
+  }
+
+  #login-page {
+    text-align: center;
+  }
+
+  .sign-up-box {
+    left: 75px;
+    margin-top: 100px;
+  }
+
+  .shape {
+    left: 60px;
+    top: 470px;
+  }
+
+  .shape-2 {
+    top: 1050px;
+    right: 60px;
+  }
+
+  #cta {
+    padding-bottom: 100px;
+  }
+
+  .team-head {
+    margin-top: 100px;
+  }
+
+  .team-box, .team-box-2, .team-box-3 {
+    width: 100%;
+
+  }
+
+  .team-box{
+    left: -18px;
+  }
+
+  .team-box-2 {
+    margin-top: 50px;
+    left: -48px;
+  }
+
+  .team-box-3 {
+    margin-top: 100px;
+    left: -48px;
+  }
+
+  .dhruv-name-extra-padding {
+    padding-left: 12px !important;
+  }
+
+  .container.cont {
+    margin-left: 28px;
+  }
+
+  .team-text {
+    padding-top: 2.5%;
+  }
+
+}
+
+@media screen and (max-width: 1100px) {
+  .btn.btn-outline-light.btn-lg.download-button {
+    padding-top: 5px;
+  }
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1300px) {
+  .blue-balls {
+    top: 175px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .blue-balls {
+    top: 200px;
+  }
 }
