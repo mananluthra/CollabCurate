@@ -32,15 +32,6 @@
 
   <div class="preloader-1">
     <div class="load"></div>
-    <span class="line line-1"></span>
-    <span class="line line-2"></span>
-    <span class="line line-3"></span>
-    <span class="line line-4"></span>
-    <span class="line line-5"></span>
-    <span class="line line-6"></span>
-    <span class="line line-7"></span>
-    <span class="line line-8"></span>
-    <span class="line line-9"></span>
   </div>
 
   <section id="title">
@@ -335,23 +326,26 @@
           <h3 class="form-head">Sign Up Here</h3>
 
           <label class="login" for="username">Username</label>
-          <input type="text" placeholder="Email or Phone" id="username">
+          <span class="error_form" id="email_error_message"></span>
+          <input type="text" placeholder="Email or Phone" id="username" required>
 
           <label class="login" for="age">Age</label>
-          <input type="number" placeholder="Age" id="age">
+          <span class="error_form" id="age_error_message"></span>
+          <input type="number" placeholder="Age" id="age" required>
 
 
           <label class="login" for="category"> I am a
             <div class="btn-group btn-group-toggle category " data-toggle="buttons">
-              <label class="btn  btn-outline-light rage ">
-                <input onclick="toggle" type="radio" name="options" id="option2" autocomplete="off"> Creator
+              <label class="btn btn-outline-light rage" id="creatorbutton" >
+                  <span class="error_form" id="category_error_message"></span>
+                <input onclick="toggle" type="radio" name="options" id="creator" autocomplete="off" > Creator
               </label>
-              <label class="btn  btn-outline-light rage">
-                <input onclick="toggle" type="radio" name="options" id="option3" autocomplete="off"> Business
+              <label class="btn btn-outline-light rage" id="businessbutton">
+                <input onclick="toggle" type="radio" name="options" id="business" autocomplete="off" > Business
               </label>
             </div>
           </label>
-          <button class="signup">Sign Up</button>
+          <input class="signup" type="button" value="Submit" name="">
         </form>
       </div>
     </div>
@@ -504,6 +498,11 @@
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"> </script>
+  <script>
+  $(window).on('load', function() {
+    $(".preloader-1").fadeOut(10)
+  });
+  </script>
   <script src="index.js">
   </script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
