@@ -817,9 +817,95 @@ form * {
 
 /* responivesness for 992px */
 @media screen and (max-width:992px) {
-  .intro-head {
+ 
+  h1.intro-head {
+    font-size: 56px !important;
     position: relative;
     z-index: 1;
+  }
+
+  h3 {
+    font-size: 32px;
+  }
+
+  .small-heads {
+    font-size: 17.6px;
+  }
+
+  .testimonial-text {
+    font-size: 32px;
+  }
+
+  .decentralised {
+    font-size: 17.6px;
+  }
+
+  .steps-p {
+    font-size: 17.6px;
+  }
+
+  .intro-icon {
+    font-size: 35.2px;
+  }
+
+  .main-introduction {
+    font-size: 38.4px;
+  }
+
+  .main-introduction-text {
+    font-size: 19.2px;
+  }
+
+  .introduction {
+    font-size: 27.2px;
+  }
+
+  .introduction-text {
+    font-size: 17.6px;
+  }
+
+  #login-page input {
+    font-size: 17.2px;
+  }
+
+  .form-head {
+    font-size: 41.6px;
+  }
+
+  .proc {
+    font-size: 17.60px;
+  }
+
+  .social {
+    font-size: 21.20px;
+  }
+
+  .founder-name {
+    font-size:
+  }
+
+  .founder-position {
+    font-size:
+  }
+
+  .founder-speech {
+    font-size:
+  }
+
+  #footer p {
+    font-size: 16px;
+  }
+
+  .founder-name {
+    font-size: 155%;
+  }
+
+  .founder-position {
+    font-size: 92%;
+  }
+
+  .founder-speech {
+    font-size: 100%;
   }
 
   .intro-grid {
