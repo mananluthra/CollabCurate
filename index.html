@@ -322,30 +322,34 @@
 
       <div class="col-lg-6">
 
-        <form class="sign-up-box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="250">
+        <form id="form" action="" method="" class="sign-up-box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="250">
           <h3 class="form-head">Sign Up Here</h3>
 
           <label class="login" for="username">Username</label>
           <span class="error_form" id="email_error_message"></span>
-          <input type="text" placeholder="Email or Phone" id="username" required>
+          <input type="text" placeholder="Email or Phone" id="username" name="username" required>
 
           <label class="login" for="age">Age</label>
           <span class="error_form" id="age_error_message"></span>
-          <input type="number" placeholder="Age" id="age" required>
+          <input type="number" placeholder="Age" id="age" name="age" required>
 
 
           <label class="login" for="category"> I am a
             <div class="btn-group btn-group-toggle category " data-toggle="buttons">
               <label class="btn btn-outline-light rage" id="creatorbutton" >
                   <span class="error_form" id="category_error_message"></span>
-                <input onclick="toggle" type="radio" name="options" id="creator" autocomplete="off" > Creator
+                <input onclick="toggle" type="radio" name="category" id="creator" autocomplete="off" value="creator"> Creator
               </label>
               <label class="btn btn-outline-light rage" id="businessbutton">
-                <input onclick="toggle" type="radio" name="options" id="business" autocomplete="off" > Business
+                <input onclick="toggle" type="radio" name="category" id="business" autocomplete="off" value="business" > Business
               </label>
             </div>
           </label>
-          <input class="signup" type="button" value="Submit" name="">
+          <div class="container submit-cont">
+
+            <input id="endgame" class="signup" type="submit" name="" value="Submit">
+            <span class="thankyou"><i class="fas fa-check check"></i> Thanks for signing up! </span>
+          </div>
         </form>
       </div>
     </div>
@@ -502,6 +506,9 @@
   $(window).on('load', function() {
     $(".preloader-1").fadeOut(10)
   });
+
+
+
   </script>
   <script src="index.js">
   </script>
