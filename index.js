@@ -28,17 +28,19 @@ $("#businessbutton").click(function() {
 
 
 
-$(window).resize(function(){
+$(function(){
         if(window.innerWidth < 1200) {
-            $("iframe").remove(".phone, .ethereum");
+            $("iframe").remove("");
         }
 });
 
-$(window).resize(function(){
+$(function(){
         if(window.innerWidth < 1400) {
-            $("img").remove(".blockchain");
+            $(".blockchain").remove("");
         }
 });
+
+
 
 $(".thankyou").hide();
 
@@ -194,6 +196,7 @@ function enableDarkMode() {
   $(".ui-vid").attr("src", "images/ui-video-min.mp4");
   $(".lightmode-footer-text").attr("class", "footer-text")
   $(".lightmode-black-box").attr("class", "black-box")
+  $(".logo").attr("src", "images/c.png")
   lightMode = false;
 };
 
@@ -236,6 +239,7 @@ function enableLightMode() {
       $(".ui-vid").attr("src", "images/cole-min.mp4");
       $(".footer-text").attr("class", "lightmode-footer-text")
       $(".black-box").attr("class", "lightmode-black-box")
+      $(".logo").attr("src", "images/lightmode-c.png")
       lightMode = true;
     };
 
