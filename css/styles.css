@@ -24,6 +24,71 @@
   position: fixed;
 }
 
+
+/* Remove border from toggler */
+.navbar-toggler {
+    border: 0 !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 0 !important;
+}
+
+/* Lines of the Toggler */
+.toggler-icon{
+    width: 30px;
+    height: 3px;
+    background-color: #e74c3c;
+    display: block;
+    transition: all 0.2s;
+}
+
+/* Adds Space between the lines */
+.middle-bar{
+    margin: 5px auto;
+}
+/* State when navbar is opened (START) */
+.navbar-toggler .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+}
+
+.navbar-toggler .middle-bar {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+}
+/* State when navbar is opened (END) */
+
+/* State when navbar is collapsed (START) */
+.navbar-toggler.collapsed .top-bar {
+    transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    transform: rotate(0);
+}
+/* State when navbar is collapsed (END) */
+
+/* Color of Toggler when collapsed */
+.navbar-toggler.collapsed .toggler-icon {
+    background-color: white;
+}
+
+
 /* .load {
   color: white;
   margin: 5px 0;
@@ -67,6 +132,7 @@
 } */
 nav {
   padding: .8vw 2vw .7vw 2vw !important;
+  z-index: 200;
 }
 
 html {
@@ -78,7 +144,7 @@ body {
   overflow-x: hidden;
 }
 
-h3 {
+.feature-1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700 !important;
   font-size: 1.8rem !important;
@@ -88,8 +154,7 @@ h3 {
   -webkit-background-clip: text;
 }
 
-#title {
-  background: rgb(0, 0, 0);
+.title {
   background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(9, 14, 27, 1) 100%);
 }
 
@@ -109,6 +174,7 @@ h3 {
   position: absolute;
   right: 0vw;
   top: 66px;
+  z-index: 0;
 }
 
 .phone {
@@ -140,11 +206,12 @@ h3 {
   padding: 1.5% 0 4%;
 }
 
+
 .navbar-brand {
   font-size: 140% !important;
   padding: 1rem;
   font-weight: 500;
-  margin-left: -35px;
+  margin-left: -6px;
   color: black;
 }
 
@@ -154,8 +221,11 @@ h3 {
 
 .nav-link {
   font-size: 1rem;
-  color: grey;
   font-family: 'Montserrat', sans-serif;
+}
+
+.navigation {
+  color: grey !important;
 }
 
 .nav-link::after {
@@ -172,7 +242,7 @@ h3 {
   transform: scaleX(1);
 }
 
-.nav-link:hover {
+.navigation:hover {
   color: white !important;
 }
 
@@ -190,7 +260,7 @@ h3 {
 }
 
 /* features section */
-#features {
+.features {
   padding: 8% 10% 8%;
   text-align: center;
   background: rgb(9, 14, 27);
@@ -238,7 +308,7 @@ h3 {
 }
 
 /* Testimonials */
-#testimonials {
+.testimonials {
   padding: 5% 5% 8%;
   text-align: center;
   background: black;
@@ -259,6 +329,8 @@ h3 {
   -webkit-box-shadow: -1px 0px 25px 16px rgb(0 0 0);
   backdrop-filter: blur(10px);
   border: 1px solid #4a4a4a;
+  margin-inline: 0px;
+
 }
 
 .testimonial-text {
@@ -308,7 +380,7 @@ h3 {
 
 /* CAROUSEL END */
 /* STEPS SECTION */
-#steps {
+.steps {
   background-color: black;
   margin-top: -.5vw;
 }
@@ -341,9 +413,7 @@ h3 {
   left: -2.5vw;
 }
 
-.show {
-  padding-left: 100px;
-}
+
 
 .steps-vid {
   width: 80%;
@@ -352,7 +422,7 @@ h3 {
   left: 12%;
 }
 
-#ui-ux {
+.ui-ux {
   background-color: black;
   margin-top: -0.5vw;
   padding-bottom: 12%;
@@ -374,7 +444,7 @@ h3 {
   overflow-x: hidden;
 }
 
-#intro {
+.intro {
   background-color: #090E1B;
   overflow: hidden;
   padding-left: 13vw;
@@ -395,15 +465,19 @@ h3 {
   margin-right: 6vw;
 }
 
-.intro-icon, .btc-intro-icon {
+.intro-icon {
+ margin-bottom: 1vw;
+ color: white;
+ font-size: 2em;
+}
+
+ .btc-intro-icon {
   margin-bottom: 1vw;
   color: white;
   font-size: 2em;
-}
-
-.btc-intro-icon {
   transform: rotate(15deg);
 }
+
 
 .main-introduction {
   font-family: 'Montserrat', sans-serif;
@@ -441,7 +515,7 @@ h3 {
   margin-right: -20px;
 }
 
-#login-page {
+.login-page {
   background: rgb(0, 0, 0);
   background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(9, 14, 27, 1) 100%);
   padding: 3vh 8vw 12% 8vw;
@@ -466,7 +540,7 @@ h3 {
   height: 58px !important;
 }
 
-#login-page input {
+.text-box {
   display: block;
   height: 50px;
   width: 100%;
@@ -491,22 +565,23 @@ form {
   backdrop-filter: blur(10px);
   border: 2px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
-  padding: 50px 35px;
+  padding: 8% 5%;
   left: 20%;
 }
 
 form * {
   font-family: 'Montserrat', sans-serif;
-  color: #ffffff;
   letter-spacing: 0.5px;
   outline: none;
   border: none;
 }
 
+
 .form-head {
   font-size: 2.4rem !important;
   font-weight: 500 !important;
   text-align: center;
+  color: white;
 }
 
 .login {
@@ -514,6 +589,7 @@ form * {
   margin-top: 30px;
   font-size: 16px;
   font-weight: 500;
+  color: white;
 }
 
 .category input {
@@ -596,14 +672,14 @@ form * {
   margin-inline: 29px;
 }
 
-#footer {
+.footer {
   background-color: black;
   text-align: center;
   padding: 3vw 0 .1vw 0;
   margin-top: -1px;
 }
 
-#cta {
+.cta {
   background: rgb(9, 14, 27);
   background: linear-gradient(180deg, rgba(9, 14, 27, 1) 0%, rgba(0, 0, 0, 1) 100%);
   overflow: hidden;
@@ -745,17 +821,18 @@ form * {
   transform: scaleX(1);
 }
 
-#footer p {
+.footer-text {
   padding-top: 2vw;
   color: white;
   font-size: .8rem;
 }
 
-.error_form {
-  top: 12px;
-  color: rgb(216, 15, 15);
-  font-size: 15px;
-  font-family: Helvetica;
+.error_form
+{
+	top: 12px;
+	color: rgb(216, 15, 15);
+    font-size: 15px;
+    font-family: Helvetica;
 }
 
 /* responivesness for 1200px */
@@ -781,13 +858,17 @@ form * {
     margin-left: -05px;
   }
 
-  #features {
-    padding: 3% 3% 3%;
+  .features {
+    padding: 3% 5% 3%;
     text-align: center;
-    background-color: black;
   }
 
-  #title {
+  .lightmode-features {
+    padding: 3% 5% 3%;
+    text-align: center;
+  }
+
+  .title {
     text-align: center;
   }
 
@@ -808,6 +889,7 @@ form * {
   .blockchain {
     display: none;
   }
+
 }
 
 /* responsiveness for 1400px */
@@ -825,6 +907,137 @@ form * {
   }
 
   .ethereum {}
+}
+
+/* responivesness for 992px */
+@media screen and (max-width:992px) {
+  .intro-head {
+    position: relative;
+    z-index: 1;
+  }
+
+  .intro-grid {
+    padding-top: 50px;
+  }
+
+  .phone {
+    margin: 0;
+    position: relative;
+    height: 300%;
+    width: 100%;
+  }
+
+  .col-lg-3.main-intro-grid {
+    padding-left: 0px;
+  }
+
+  .dala {
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .carousel-control-prev {
+    margin-left: -40px;
+    display: none !important;
+  }
+
+  .carousel-control-next {
+    display: none !important;
+  }
+
+  .blue-balls {
+    top: 340px;
+  }
+
+  .ethereum {
+    display: none;
+  }
+
+  .login-page {
+    text-align: center;
+  }
+
+
+  .shape {
+    left: 0px;
+    top: 550px;
+  }
+
+  .shape-2 {
+    top: 1138px;
+    right: 17px;
+  }
+
+  .cta {
+    padding-bottom: 100px;
+  }
+
+  .team-head {
+    margin-top: 100px;
+  }
+
+  .team-box, .team-box-2, .team-box-3 {
+    width: 100%;
+
+  }
+
+  .team-box{
+    left: -18px;
+  }
+
+  .team-box-2 {
+    margin-top: 50px;
+    left: -48px;
+  }
+
+  .team-box-3 {
+    margin-top: 100px;
+    left: -48px;
+  }
+
+  .dhruv-name-extra-padding {
+    padding-left: 12px !important;
+  }
+
+  .container.cont {
+    margin-left: 28px;
+  }
+
+  .team-text {
+    padding-top: 2.5%;
+  }
+
+  .steps-vid, .ui-vid {
+    width: 100%;
+    height:100%;
+    left: 0%;
+  }
+
+  .steps-vid {
+    left: 1%;
+  }
+
+
+}
+
+@media screen and (max-width: 1100px) {
+  .btn.btn-outline-light.btn-lg.download-button {
+    padding-top: 5px;
+  }
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1300px) {
+  .blue-balls {
+    top: 175px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .blue-balls {
+    top: 200px;
+  }
 }
 
 /* responivesness for 992px */
@@ -876,20 +1089,15 @@ form * {
     text-align: center;
   }
 
+  form {
+    width: 100%;
+  }
+
   .sign-up-box {
-    left: 75px;
-    margin-top: 100px;
+    left: 9px;
+    top: 111px;
   }
 
-  .shape {
-    left: 60px;
-    top: 470px;
-  }
-
-  .shape-2 {
-    top: 1050px;
-    right: 60px;
-  }
 
   #cta {
     padding-bottom: 100px;
@@ -938,32 +1146,6 @@ form * {
   .steps-vid {
     left: 1%;
   }
-
-  .intro-right, .intro-text-right {
-    text-align: right;
-    margin-left: 450px;
-    margin-right: 0px;
-  }
-
-  .intro-left, .intro-text-left {
-    margin-right: 450px;
-  }
-
-  .intro-grid-left {
-    text-align: right;
-  }
-
-  .intro-icon, .btc-intro-icon {
-    font-size: 5em;
-    position: relative;
-    top: 120px;
-  }
-}
-
-@media screen and (max-width: 1100px) {
-  .btn.btn-outline-light.btn-lg.download-button {
-    padding-top: 5px;
-  }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1300px) {
@@ -976,4 +1158,449 @@ form * {
   .blue-balls {
     top: 200px;
   }
+}
+
+/* responivesness for 800px */
+@media screen and (max-width: 800px) {
+  .download-button {
+    padding-top: 0px !important;
+  }
+}
+
+
+/* responsiveness for 440px */
+@media screen and (max-width: 700px) {
+  h1, h2, h3, p {
+    text-align: left;
+  }
+
+  h1.intro-head {
+    position: relative;
+      z-index: 1;
+      font-size: 3rem;
+      left: 0px;
+  }
+
+  .balls {
+    top: -24rem;
+    width: 120%;
+  }
+
+  #start-button {
+    display: none !important;
+  }
+
+  #intro {
+    padding-left: 36.5px;
+    padding-top: 100px;
+  }
+
+  .white-box {
+    border-radius: 25px;
+    box-shadow: none;
+  }
+
+  .lightmode-white-box {
+    border-radius: 25px;
+    box-shadow: none;
+  }
+
+  h3.feature-1 {
+    text-align: center;
+  }
+
+  h3.lightmode-feature-1 {
+    text-align: center;
+  }
+
+  p.damage {
+    text-align: center;
+  }
+
+  #steps {
+    padding-left: 22px;
+    padding-right: 40px;
+  }
+
+  .steps-p, .steps-text {
+    text-align: left;
+  }
+
+  .lightmode-steps-p, .lightmode-steps-text {
+    text-align: left;
+  }
+
+  .black-box {
+    padding: 50px 12px;
+    border-width: 1px 0;
+    border-radius: 0;
+  }
+
+  .lightmode-black-box {
+    padding: 50px 12px;
+    border-width: 1px 0;
+    border-radius: 0;
+  }
+
+  p.decentralised {
+    word-spacing: 0.25rem;
+    line-height: 1.6;
+  }
+
+  p.lightmode-decentralised {
+    word-spacing: 0.25rem;
+    line-height: 1.6;
+  }
+
+  .dala {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #ui-ux {
+    padding-left: 22px;
+    padding-right: 40px;
+  }
+
+  .cta-text {
+    text-align: left;
+  }
+
+  .lightmode-cta-text {
+    text-align: left;
+  }
+
+  #login-page {
+    padding-left: 22px;
+    padding-right: 40px;
+  }
+
+  .shape {
+    top: 600px;
+  }
+
+  .shape-2 {
+    top: 1138px;
+    right: 8px;
+  }
+
+  .sign-up-box {
+    /* left: auto; */
+  }
+
+  #cta {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 100px;
+  }
+
+  .team-head {
+    padding-left: 20px;
+  }
+
+  .team-box {
+    border-radius: 10px;
+  }
+
+  .team-box-2 {
+    border-radius: 10px;
+  }
+
+  .team-box-3 {
+    border-radius: 10px;
+  }
+
+  .footer-link {
+    padding-top: 50px;
+  }
+
+  p.footer-text {
+    text-align: center;
+  }
+}
+
+/* responsiveness for 380px */
+
+@media screen and (max-width: 500px) {
+  .balls {
+    top: -18rem;
+    width: 112%;
+  }
+
+}
+
+
+/* LIGHT MODE */
+
+.lightmode-title {
+  background: white;
+}
+
+.lightmode-intro {
+    background-color: white;
+    overflow: hidden;
+    padding-left: 13vw;
+    padding-right: 10vw;
+    padding-top: 1vw;
+    padding-bottom: 3vw;
+    margin-top: -0.5vw;
+}
+
+.lightmode-features {
+
+  padding: 8% 10% 8%;
+  text-align: center;
+  background: white;
+  margin-top: -.5vw;
+}
+
+.lightmode-steps {
+    background-color: white;
+    margin-top: -.5vw;
+}
+
+.lightmode-ui-ux {
+  background-color: white;
+  margin-top: -0.5vw;
+  padding-bottom: 12%;
+}
+
+.lightmode-testimonials {
+  padding: 5% 5% 8%;
+  text-align: center;
+  background: white;
+  margin-top: -2vw;
+  position: relative;
+}
+
+
+.lightmode-login-page {
+  background: white;
+  padding: 3vh 8vw 12% 8vw;
+  position: relative;
+  margin-top: -1px;
+}
+
+.lightmode-cta {
+  background: white;
+  overflow: hidden;
+  padding: 3vw 6vw 6vw 6vw;
+  margin-top: -0.5vw;
+}
+
+.lightmode-footer {
+  background-color: white;
+  text-align: center;
+  padding: 3vw 0 .1vw 0;
+  margin-top: -1px;
+}
+
+.lightmode-navbar-brand {
+    font-size: 140% !important;
+    padding: 1rem;
+    font-weight: 500;
+    margin-left: -6px;
+    color: black !important;
+}
+
+.lightmode-navigation{
+  color: black !important;
+}
+
+.lightmode-navigation:hover{
+  color: black !important;
+}
+
+.lightmode-main-introduction {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: black;
+  text-align: left;
+  margin-bottom: 2vw;
+  font-size: 2.2em;
+}
+
+.lightmode-introduction {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: black;
+  text-align: left;
+  margin-bottom: 2vw;
+  font-size: 1.5em;
+}
+
+.lightmode-intro-icon {
+  margin-bottom: 1vw;
+  color: black;
+  font-size: 2em;
+}
+
+.lightmode-btc-intro-icon {
+  margin-bottom: 1vw;
+  color: black;
+  font-size: 2em;
+  transform: rotate(15deg);
+}
+
+.lightmode-introduction-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  color: black;
+  text-align: left;
+  word-spacing: 0.1rem;
+  margin-right: -20px;
+}
+
+.lightmode-main-introduction-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: black;
+  text-align: left;
+  word-spacing: 0.1rem;
+  margin-right: -14px;
+}
+
+.lightmode-white-box {
+    background: rgb(14, 17, 39);
+    background: linear-gradient(185deg, rgb(244 38 104) 0%, rgb(254 100 17) 100%);
+    padding: 5.5%;
+    border-radius: 25px;
+    transition: all .5s ease-in-out;
+    display: inline-grid;
+    z-index: 10;
+    position: relative;
+    -webkit-box-shadow: -4px 4px 24px 0px rgb(255 97 97);
+
+}
+
+.lightmode-feature-1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700 !important;
+  font-size: 1.8rem !important;
+  color: black;
+}
+
+
+.lightmode-steps-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: black;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.lightmode-steps-p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .9rem;
+  color: black;
+  text-align: center;
+  word-spacing: .3rem;
+  line-height: 1.2rem;
+}
+
+.lightmode-testimonial-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: black;
+}
+
+
+.lightmode-decentralised {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  color: black;
+  word-spacing: 0.5rem;
+  line-height: 1.9rem;
+}
+
+.lightmode-proc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .9rem;
+  color: black;
+  text-align: center;
+  word-spacing: .3rem;
+  line-height: 1.2rem;
+}
+
+.lightmode-cta-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: black;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.lightmode-text-box {
+  display: block;
+  height: 50px;
+  width: 100%;
+  background-color: rgb(244 134 31);
+  border-radius: 3px;
+  padding: 0 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.lightmode-login {
+  display: block;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+}
+
+.lightmode-team-head {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: black;
+    text-align: left;
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+}
+
+.lightmode-form-head {
+  font-size: 2.4rem !important;
+  font-weight: 500 !important;
+  text-align: center;
+  color: black;
+}
+
+#light-mode {
+  font-size: 20px;
+}
+
+.lightmode-footer-text {
+    padding-top: 2vw;
+    color: black;
+    font-size: .8rem;
+}
+
+.lightmode-black-box {
+  background: #ffffff0d;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 250px;
+  padding-right: 250px;
+  border-radius: 25px;
+  transition: all .5s ease-in-out;
+  position: relative;
+  z-index: 100;
+  -webkit-box-shadow: -1px 0px 25px 16px rgb(255 255 255);
+  backdrop-filter: blur(10px);
+  border: 1px solid #4a4a4a;
+}
+
+.theme-icon:hover {
+  color: yellow;
+}
+
+.flip {
+  transform: rotate(360deg);
+}
+
+.theme-icon {
+  font-size: 20px;
 }
