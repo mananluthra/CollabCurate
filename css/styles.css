@@ -206,12 +206,15 @@ body {
   padding: 1.5% 0 4%;
 }
 
+.logo{
+  position: relative;
+  left: 12px;
+}
 
 .navbar-brand {
   font-size: 140% !important;
-  padding: 1rem;
   font-weight: 500;
-  margin-left: -6px;
+  margin-left: -1px;
   color: black;
 }
 
@@ -1402,9 +1405,8 @@ form * {
 
 .lightmode-navbar-brand {
     font-size: 140% !important;
-    padding: 1rem;
     font-weight: 500;
-    margin-left: -6px;
+    margin-left: -1px;
     color: black !important;
 }
 
