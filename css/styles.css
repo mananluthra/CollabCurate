@@ -178,12 +178,12 @@ body {
 }
 
 .phone {
-  height: 749vh;
-  top: -330vh;
+  height: 676vh;
+  top: -303vh;
   position: relative;
   margin-top: 10%;
-  margin-bottom: -670vh;
-  left: 35%;
+  margin-bottom: -579vh;
+  left: 37%;
   margin-left: -10vw;
   margin-right: -10vw;
   z-index: 4;
@@ -1613,3 +1613,41 @@ form * {
 .theme-icon {
   font-size: 20px;
 }
+
+
+
+/* responsiveness for 1550px */
+/* @media screen and (min-width: 1550px) {
+  .main-intro-grid {
+    margin-right: 0;
+  }
+} */
+
+/* responsiveness for 1650px */
+/* @media screen and (min-width: 1650px) {
+  .dala {
+    padding-left: 150px;
+  }
+
+  .blockchain {
+    margin-left: 900px;
+  }
+} */
+
+/* responsiveness for 4k*/
+/* @media screen and (min-width: 2000px) {
+  .dala {
+    padding-left: 400px;
+  }
+
+  .blockchain {
+    margin-left: 1000px;
+  }
+}
+
+@media screen and (min-width: 2300px) {
+  .blockchain {
+    margin-left: 1500px;
+    margin-top: -400px;
+  }
+} */
