@@ -905,7 +905,7 @@ form * {
   .ethereum {}
 }
 
-@media screen and (max-width:1400px) {
+@media screen and (max-width:1100px) {
 
 .carousel-control-prev {
   display: none !important;
