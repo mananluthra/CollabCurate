@@ -901,16 +901,19 @@ form * {
   .blockchain {
     display: none;
   }
-
-  .carousel-control-prev {
-    display: none !important;
-  }
-
-  .carousel-control-next {
-    display: none !important;
-  }
-
+  
   .ethereum {}
+}
+
+@media screen and (max-width:1400px) {
+
+.carousel-control-prev {
+  display: none !important;
+}
+
+.carousel-control-next {
+  display: none !important;
+}
 }
 
 /* responivesness for 992px */
